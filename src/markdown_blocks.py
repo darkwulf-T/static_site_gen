@@ -11,14 +11,13 @@ class BlockType(Enum):
 
 def markdown_to_block(markdown):
     blocks = markdown.split("\n\n")
-    cleaned_blocks = []
+    filtered_blocks = []
     for block in blocks:
-        cleaned_blocks.append(block.strip())
-    final_blocks = []
-    for block in cleaned_blocks:
-        if block != "":
-            final_blocks.append(block)
-    return final_blocks
+        if block == "":
+            continue
+        block = block.strip()
+        filtered_blocks.append(block)
+    return filtered_blocks
 
 def block_to_block_type(block):
     count = 0
