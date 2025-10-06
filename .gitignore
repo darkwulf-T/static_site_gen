@@ -10,8 +10,6 @@ __pycache__/
 env/
 venv/
 
-# Generated files
-/public/
 
 # Editor/IDE files
 .vscode/
